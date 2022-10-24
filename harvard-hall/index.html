@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Murder at Harvard Hall.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Murder at Harvard Hall" startnode="1" creator="Twine" creator-version="2.3.15" ifid="79555506-B85D-438C-9D7D-1C5240CCE911" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="tbw" color="red"></tw-tag><tw-passagedata pid="1" name="Intro: It was a dark and stormy night..." tags="" position="13,11" size="100,100">{(set: num-type $crimeSceneLevel to 1)
+<tw-storydata name="The Murder at Harvard Hall" startnode="1" creator="Twine" creator-version="2.3.15" ifid="79555506-B85D-438C-9D7D-1C5240CCE911" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="tbw" color="red"></tw-tag><tw-passagedata pid="1" name="Intro: It was a dark and stormy night..." tags="" position="14.666666666666666,11" size="100,100">{(set: num-type $crimeSceneLevel to 1)
 (set: $suspectQuestioned to false)
 (set: $crimeSceneInvestigated to false)
 (set: $conceirgeQuestioned to false)
@@ -21,6 +21,7 @@
 (set: $passageOpened to false)
 (set: $hasCoin to false)
 (set: $friendInterviewed to false)
+(set: $suspectInterviewed to false)
 }You are (cycling-link: bind $firstname, &quot;Aidan&quot;, &quot;Marley&quot;, &quot;Rowan&quot;) (cycling-link: bind $lastname, &quot;Knight&quot;, &quot;Abbott&quot;, &quot;Stone&quot;), the haggard, under-caffeinated PI who gets called in when everyone else is stumped. Tonight would have been a night like any other, spent in the dim light of your office, poring over cold case files, until you got the call: a new case. Finally.
 
 You pull up to Harvard Hall at 11 pm, turning up your coat collar against the wind and the rain, stepping around puddles as you plod to the entrance.  As you look up at the building&#39;s facade, lightning strikes, illuminating the old bricks, the gentle gold glow of the windows, and the open front door before you. This is going to be a long evening.
@@ -82,7 +83,7 @@ It&#39;s guns. Wall to wall guns of every size, shape, ammunition, age, color, y
 Irene huffs in amusement. &quot;Okay, Chekhov. Do you wanna keep looking around, or is it time to pay a visit to our first suspect?&quot;
 
 [[see what suspect&#39;s deal is -&gt; suspect intro]]
-[[look for clues at the scene -&gt; crime scene investigate]]</tw-passagedata><tw-passagedata pid="9" name=" suspect intro" tags="intro" position="1183,12" size="100,100">You make your way back out to the basement stairwell to talk to Lee Williams, your current chief suspect. He&#39;s currently hunched on the floor near the door to the crime scene, looking rather sorry for himself.
+[[look for clues at the scene -&gt; crime scene investigate]]</tw-passagedata><tw-passagedata pid="9" name=" suspect intro" tags="intro" position="1183,12" size="100,100">(set: $suspectInterviewed to true)You make your way back out to the basement stairwell to talk to Lee Williams, your current chief suspect. He&#39;s currently hunched on the floor near the door to the crime scene, looking rather sorry for himself.
 
 &quot;Mr. Williams,&quot; Irene says, sidling up to the young man. &quot;Would you mind answering some questions about your involvement with this crime scene?&quot;
 
@@ -150,6 +151,7 @@ You don&#39;t know why Lee ran away from the crime scene, but you feel confident
 (if: $buildingManagerQuestioned is false)[[[Talk to building manager -&gt; building manager statement 1]]]
 (if: $MMEQuestioned is false)[[[Talk to murder mystery enthusiasts -&gt; MME statement 1]]]
 [[I need to check my notes. -&gt;CLUES]]
+[[I need to see the crime scene. -&gt; crime scene investigate]] 
 (if: $conceirgeQuestioned is true)[(if: $buildingManagerQuestioned is true)[(if: $MMEQuestioned is true)[[[I have enough leads. Let&#39;s move on. -&gt; next next]]]]]</tw-passagedata><tw-passagedata pid="18" name=" conceirge statement 1" tags="" position="642,268" size="100,100">{(set: $conceirgeQuestioned to true)}{(if: $vibeCheck is false)[&quot;Mx. Hill,&quot; you say with a curt nod, walking up to the conceirge desk. &quot;Do you have a few moments to speak with me about the events of this evening?&quot;
 
 &quot;Of course,&quot; they reply, rounding the corner of their desk to speak with you more directly. &quot;And please, call me Cassidy.&quot;](if: $vibeCheck is true)[&quot;Cassidy, I have a few more questions about the residents of this building. Do you mind [[talking to me some more?&quot; -&gt; conceirge 3]]]}
@@ -283,7 +285,8 @@ Irene assesses the size of the window. &quot;It&#39;s pretty small,&quot; she sa
 
 (click: &quot;crystal ball&quot;)[The crystal ball is a made of polished, smooth crystal in a foggy red color. Upon closer inspection, there is an engraving of an ornate masquerade mask toward the bottom. //This dude is sincerely weird,// you think to yourself.]
 
-[[Ok, let&#39;s go talk to the suspect. -&gt; suspect intro]]</tw-passagedata><tw-passagedata pid="39" name=" friend 1" tags="" position="204,1088" size="100,100">(set: $friendInterviewed to true)You make your way up to the third floor, stopping briefly in front of the apartment number Cassidy gave you. &quot;Shall we?&quot; Irene asks, gesturing to the door.
+(if: $suspectInterviewed is false)[[[Ok, let&#39;s go talk to the suspect. -&gt; suspect intro]]]
+(if: $suspectInterviewed is true)[[[Ok, I&#39;ve seen everything I need to see. -&gt; what&#39;s next?]]]</tw-passagedata><tw-passagedata pid="39" name=" friend 1" tags="" position="204,1088" size="100,100">(set: $friendInterviewed to true)You make your way up to the third floor, stopping briefly in front of the apartment number Cassidy gave you. &quot;Shall we?&quot; Irene asks, gesturing to the door.
 
 You give the door a decisive knock. &quot;Dr. Boulder? This is Detective $firstname $lastname. I have a few questions for you about Lee Williams.&quot;
 
