@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Murder at Harvard Hall.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Murder at Harvard Hall" startnode="1" creator="Twine" creator-version="2.3.15" ifid="79555506-B85D-438C-9D7D-1C5240CCE911" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="tbw" color="red"></tw-tag><tw-passagedata pid="1" name="Intro: It was a dark and stormy night..." tags="" position="13,11" size="100,100">{(set: num-type $crimeSceneLevel to 1)
+<tw-storydata name="The Murder at Harvard Hall" startnode="1" creator="Twine" creator-version="2.3.15" ifid="79555506-B85D-438C-9D7D-1C5240CCE911" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="tbw" color="red"></tw-tag><tw-passagedata pid="1" name="Intro: It was a dark and stormy night..." tags="" position="13,11" size="100,100">{(set: num-type $crimeSceneLevel to 1)
 (set: $suspectQuestioned to false)
 (set: $crimeSceneInvestigated to false)
 (set: $conceirgeQuestioned to false)
@@ -150,7 +150,7 @@ You don&#39;t know why Lee ran away from the crime scene, but you feel confident
 (if: $buildingManagerQuestioned is false)[[[Talk to building manager -&gt; building manager statement 1]]]
 (if: $MMEQuestioned is false)[[[Talk to murder mystery enthusiasts -&gt; MME statement 1]]]
 [[I need to check my notes. -&gt;CLUES]]
-(if: $conceirgeQuestioned is true)[(if: $buildingManagerQuestioned is true)[(if: $MMEQuestioned is true)[[[I have enough leads. Let&#39;s move on. -&gt; accuse?]]]]]</tw-passagedata><tw-passagedata pid="18" name=" conceirge statement 1" tags="" position="642,268" size="100,100">{(set: $conceirgeQuestioned to true)}{(if: $vibeCheck is false)[&quot;Mx. Hill,&quot; you say with a curt nod, walking up to the conceirge desk. &quot;Do you have a few moments to speak with me about the events of this evening?&quot;
+(if: $conceirgeQuestioned is true)[(if: $buildingManagerQuestioned is true)[(if: $MMEQuestioned is true)[[[I have enough leads. Let&#39;s move on. -&gt; next next]]]]]</tw-passagedata><tw-passagedata pid="18" name=" conceirge statement 1" tags="" position="642,268" size="100,100">{(set: $conceirgeQuestioned to true)}{(if: $vibeCheck is false)[&quot;Mx. Hill,&quot; you say with a curt nod, walking up to the conceirge desk. &quot;Do you have a few moments to speak with me about the events of this evening?&quot;
 
 &quot;Of course,&quot; they reply, rounding the corner of their desk to speak with you more directly. &quot;And please, call me Cassidy.&quot;](if: $vibeCheck is true)[&quot;Cassidy, I have a few more questions about the residents of this building. Do you mind [[talking to me some more?&quot; -&gt; conceirge 3]]]}
 
@@ -210,7 +210,7 @@ You don&#39;t know why Lee ran away from the crime scene, but you feel confident
 
 &quot;Did he have any friends in the building? Someone who could vouch for him?&quot; Irene asks, taking notes on her notepad.
 
-&quot;Yeah, he was doing some clerical work for Dr. Stone. She lives on the third floor, she&#39;s an architectural historian. She might be able to tell you a little more about him, if you want to pay her a visit,&quot; Cassidy says, brightening up at the mention of her. &quot;She&#39;s a really sweet lady. I&#39;m sure she&#39;ll be able to give you a better idea of the person he normally is.&quot;
+&quot;Yeah, he was doing some clerical work for Dr. Boulder. She lives on the third floor, she&#39;s an architectural historian. She might be able to tell you a little more about him, if you want to pay her a visit,&quot; Cassidy says, brightening up at the mention of her. &quot;She&#39;s a really sweet lady. I&#39;m sure she&#39;ll be able to give you a better idea of the person he normally is.&quot;
 
 [[Ask about victim -&gt; con victim descrip]]
 [[Ask about the Crooked Creek Committee -&gt; con MME descrip]]
@@ -253,13 +253,13 @@ Irene laughs once, loudly. &quot;You don&#39;t mean...?&quot;
 
 [[What&#39;s this about a ouija board? -&gt; MME 3]]</tw-passagedata><tw-passagedata pid="36" name=" MME 3" tags="" position="906,499" size="100,100">(set: $MMEInfodump to true)&quot;Oh, the ouija board?&quot; Rose seems rather surprised you have focused on this detail. &quot;Yeah, Dr. Frederick has all kinds of old stuff in his study, including this wild looking ouija board. He loans it to us sometimes when we read books that deal with the supernatural. Or for our annual Halloween party. You&#39;re welcome to come up to our meeting room and have a look, if you&#39;d like.&quot;
 
-[[Cool, thanks. I&#39;ll talk to you later. -&gt; what&#39;s next?]]</tw-passagedata><tw-passagedata pid="37" name=" next next" tags="" position="452,1280" size="100,100">From here, you have a few options.
+[[Cool, thanks. I&#39;ll talk to you later. -&gt; what&#39;s next?]]</tw-passagedata><tw-passagedata pid="37" name=" next next" tags="" position="662,935" size="100,100">From here, you have a few options.
 
-1. Cassidy Hill mentioned Dr. Stone, friend of Lee Williams who lives on the third floor. You may want to pay her a visit.
+1. Cassidy Hill mentioned Dr. Boulder, friend of Lee Williams who lives on the third floor. You may want to pay her a visit.
 2. You were invited to see the meeting room of the Crooked Creek Committee, which, who may have some more valuable intel about the crime at hand and their thriller of the month.
 3. You could always go take a second look at the crime scene and see if there is anything else to glean. That secret passage may need a closer look.
 
-[[Visit Dr. Stone -&gt; friend 1]]
+[[Visit Dr. Boulder -&gt; friend 1]]
 [[Tour the murder mystery meeting place -&gt; MME room 1]]
 [[I need to look at my notes. -&gt;CLUES]]
 (if: $hasCoin is true)[(if: $friendInterviewed is true)[[[Go back to the crime scene -&gt; crime scene 3]]]]</tw-passagedata><tw-passagedata pid="38" name=" crime scene investigate" tags="" position="1068,81" size="100,100">(set: num-type $crimeSceneLevel to 2) This is a garden apartment with a small window near the ceiling. Bookcases line one wall, and the rest of the room is adorned with cozy reading lamps, armchairs, and soft-looking rugs. On one accent table, there is an ornate-looking crystal ball.
@@ -276,17 +276,20 @@ Irene assesses the size of the window. &quot;It&#39;s pretty small,&quot; she sa
 (click: &quot;reading lamps&quot;)[You&#39;re pacing the room, inspecting the space, when you accidentally bump into a conspicuously placed reading lamp. Instead of knocking over and breaking a priceless piece of antique furniture, it tilts slighty to the side and ONE OF THE BOOKCASES OPENS INTO A SECRET PASSAGE.
 
 &quot;Okay, that is seriously cool,&quot; Irene says, peeking into the little closet space that was revealed. You can&#39;t help but agree.
---]
+--
+
+(click: &quot;SECRET PASSAGE&quot;)[You peer into the small space that opened up behind the bookcase. While the reveal of the room was amazing, when you look inside, you&#39;re a little disappointed with what you find. It&#39;s just a plain room lined with solid brick, no discernible features or furniture in sight. Must have just been a hiding space, you suppose.
+--]]
 
 (click: &quot;crystal ball&quot;)[The crystal ball is a made of polished, smooth crystal in a foggy red color. Upon closer inspection, there is an engraving of an ornate masquerade mask toward the bottom. //This dude is sincerely weird,// you think to yourself.]
 
-[[Ok, let&#39;s go talk to the suspect. -&gt; suspect intro]]</tw-passagedata><tw-passagedata pid="39" name=" friend 1" tags="" position="304,1248" size="100,100">(set: $friendInterviewed to true)You make your way up to the third floor, stopping briefly in front of the apartment number Cassidy gave you. &quot;Shall we?&quot; Irene asks, gesturing to the door.
+[[Ok, let&#39;s go talk to the suspect. -&gt; suspect intro]]</tw-passagedata><tw-passagedata pid="39" name=" friend 1" tags="" position="204,1088" size="100,100">(set: $friendInterviewed to true)You make your way up to the third floor, stopping briefly in front of the apartment number Cassidy gave you. &quot;Shall we?&quot; Irene asks, gesturing to the door.
 
-You give the door a decisive knock. &quot;Dr. Stone? This is Detective $firstname $lastname. I have a few questions for you about Lee Williams.&quot;
+You give the door a decisive knock. &quot;Dr. Boulder? This is Detective $firstname $lastname. I have a few questions for you about Lee Williams.&quot;
 
 The door creeps open, revealing an older woman in comfortable house clothes. She greets you with a warm smile. &quot;I was wondering if I would hear from you. Please, come in. I would be happy to talk with you about Lee.&quot;
 
-[[Enter Dr. Stone&#39;s apartment -&gt; friend 2]]</tw-passagedata><tw-passagedata pid="40" name=" MME room 1" tags="" position="142,1442" size="100,100">You make your way up to the ballroom where the Crooked Creek Committee hold their meetings. The ballroom is beautiful and classic, with paneled walls and a chandelier in the ceiling. Tables have been placed in the room where dancing would have usually occurred, and a bookshelf full of all of the Crooked Creek mysteries is proudly displayed near the entrance to the room.
+[[Enter Dr. Boulder&#39;s apartment -&gt; friend 2]]</tw-passagedata><tw-passagedata pid="40" name=" MME room 1" tags="" position="142,1442" size="100,100">You make your way up to the ballroom where the Crooked Creek Committee hold their meetings. The ballroom is beautiful and classic, with paneled walls and a chandelier in the ceiling. Tables have been placed in the room where dancing would have usually occurred, and a bookshelf full of all of the Crooked Creek mysteries is proudly displayed near the entrance to the room.
 
 The Committee is delighted to see you, greeting you warmly as you enter. &quot;Detective $lastname! Glad you could make it up! Feel free to have a look around!&quot; Rose calls. &quot;Come see me when you&#39;re ready and I&#39;ll show you Dr. Frederick&#39;s ouija board.&quot;
 
@@ -307,7 +310,7 @@ You can [[inspect the secret room -&gt; crime scene 3a inspect tiny room]] behin
 [[They were a secret society that was around here in the 60s. -&gt; suspect 2a]]</tw-passagedata><tw-passagedata pid="44" name=" crime scene 3a inspect tiny room" tags="" position="778,1370" size="100,100">(set: num-type $crimeSceneLevel to 3)You squeeze into the secret room. It&#39;s too small for two, so Irene stays behind in the study looking for more evidence. It&#39;s a tiny room lined with brick walls. When you feel along the walls, you can tell there is a weird groove in the wall, but you don&#39;t really know what could fit in there. Above the groove, in crimson ink, you see an etching of a theatrical mask. //So this was a secret Order hideout. Huh.//
 
 [[go back -&gt; crime scene 3]]
-(if: $hasCoin is true)[[[Use planchette on wall -&gt; PASSAGE OPEN]]]</tw-passagedata><tw-passagedata pid="45" name=" accuse?" tags="" position="778,1007" size="100,100">&quot;I think I&#39;m ready to follow up on these leads,&quot; you tell Irene, consulting your notebook.
+(if: $hasCoin is true)[[[Use planchette on wall -&gt; PASSAGE OPEN]]]</tw-passagedata><tw-passagedata pid="45" name=" accuse?" tags="" position="881.3333333333334,872" size="100,100">&quot;I think I&#39;m ready to follow up on these leads,&quot; you tell Irene, consulting your notebook.
 
 &quot;Before we go on, is there anyone you feel like you have enough evidence to arrest?&quot; Inspector Ward asks. &quot;It seems like we have several likely looking suspects at the moment.&quot;
 
@@ -356,30 +359,30 @@ You round the corner, getting ready to return to the crime scene, when you see L
 
 Irene is politely hiding her giggles behind her hand, but only barely. &quot;Who knew? The fanciest man alive, a closet nerd?&quot;
 
-[[Yeah, yeah. Your secret is safe with me. -&gt; what&#39;s next?]]</tw-passagedata><tw-passagedata pid="56" name=" friend 2" tags="" position="177,1217" size="100,100">You step into her apartment, taking in the comfortable, worn-looking furniture, books lining the shelves along the walls, and the unique artwork hanging around the living room.
+[[Yeah, yeah. Your secret is safe with me. -&gt; what&#39;s next?]]</tw-passagedata><tw-passagedata pid="56" name=" friend 2" tags="" position="77,1057" size="100,100">You step into her apartment, taking in the comfortable, worn-looking furniture, books lining the shelves along the walls, and the unique artwork hanging around the living room.
 
 &quot;Are these blueprints from Harvard Hall?&quot; Irene asks, gazing at one piece off by the window.
 
-&quot;Yes, they&#39;re some of the original blueprints from the 1960s,&quot; Dr. Stone replies. &quot;I&#39;m an architectural historian, and I&#39;ve been collecting pieces of history about Harvard Hall ever since I moved in. It&#39;s a bit of a passion project.&quot;
+&quot;Yes, they&#39;re some of the original blueprints from the 1960s,&quot; Dr. Boulder replies. &quot;I&#39;m an architectural historian, and I&#39;ve been collecting pieces of history about Harvard Hall ever since I moved in. It&#39;s a bit of a passion project.&quot;
 
 &quot;They&#39;re incredibly deatailed,&quot; you say, looking more closely. Indeed, you can see the floor plans of individual apartments in the blueprints, right down to the secret room in Dr. Frederick&#39;s apartment.
 
-&quot;Well, if you don&#39;t mind us getting right down to business, I believe you were here to talk to me about Lee,&quot; Dr. Stone says, taking a seat on her couch.
+&quot;Well, if you don&#39;t mind us getting right down to business, I believe you were here to talk to me about Lee,&quot; Dr. Boulder says, taking a seat on her couch.
 
-[[Can you tell me more about why he was in Dr. Frederick&#39;s apartment? -&gt; friend 3]]</tw-passagedata><tw-passagedata pid="57" name=" friend 3" tags="" position="183,1067" size="100,100">&quot;Ah, yes, Dr. Frederick,&quot; she says with a sigh. &quot;He&#39;ll be missed terribly. I was working with him rather closely on my project chronicling the history of Harvard Hall. As a long-time resident, he has a lot of insight on former residents and features of the building as it&#39;s changed over time. He&#39;s also something of a collector, so Lee was helping me exchange different documents and artifacts from the building with him. Lee is also very good with puzzles, so he was instrumental in helping with all of the Crimson Mask stuff.&quot;
+[[Can you tell me more about why he was in Dr. Frederick&#39;s apartment? -&gt; friend 3]]</tw-passagedata><tw-passagedata pid="57" name=" friend 3" tags="" position="81.33333333333333,907" size="100,100">&quot;Ah, yes, Dr. Frederick,&quot; she says with a sigh. &quot;He&#39;ll be missed terribly. I was working with him rather closely on my project chronicling the history of Harvard Hall. As a long-time resident, he has a lot of insight on former residents and features of the building as it&#39;s changed over time. He&#39;s also something of a collector, so Lee was helping me exchange different documents and artifacts from the building with him. Lee is also very good with puzzles, so he was instrumental in helping with all of the Crimson Mask stuff.&quot;
 
-[[Crimson Mask? -&gt; friend 4]]</tw-passagedata><tw-passagedata pid="58" name=" friend 4" tags="" position="323,1010" size="100,100">&quot;Yes, the Order of the Crimson Mask. I&#39;m surprised he hasn&#39;t told you more about it, since that was why he was down there in the first place tonight,&quot; Dr. Stone replies, looking rather surprised. &quot;Harvard Hall was first constructed as a meeting place for the Order of the Crimson Mask, an underground criminal organization. Of course, it no longer exists today, but before it was eradicated, they held their meetings in secret here. You don&#39;t think every apartment building has this many secret entrances and passages, do you?&quot; she jokes, gesturing to the blueprints you were just examining.
+[[Crimson Mask? -&gt; friend 4]]</tw-passagedata><tw-passagedata pid="58" name=" friend 4" tags="" position="223,850" size="100,100">&quot;Yes, the Order of the Crimson Mask. I&#39;m surprised he hasn&#39;t told you more about it, since that was why he was down there in the first place tonight,&quot; Dr. Boulder replies, looking rather surprised. &quot;Harvard Hall was first constructed as a meeting place for the Order of the Crimson Mask, an underground criminal organization. Of course, it no longer exists today, but before it was eradicated, they held their meetings in secret here. You don&#39;t think every apartment building has this many secret entrances and passages, do you?&quot; she jokes, gesturing to the blueprints you were just examining.
 
-&quot;I guess not,&quot; you respond. &quot;[[But what does this have to do with Lee Williams? -&gt; friend 5]]&quot;</tw-passagedata><tw-passagedata pid="59" name=" friend 5" tags="" position="432,1123" size="100,100">&quot;Dr. Frederick was a collector of Crimson Mask memorabilia,&quot; Dr. Stone explains. You think of the red crystal ball and the ouija board, both with the strange engraving, and start to remember even more objects around his apartment with a similar theme. &quot;He had just discovered a new artifact and was eager to show it to Lee and I. I sent Lee down to retrieve it this evening and, well, the rest is history.&quot;
+&quot;I guess not,&quot; you respond. &quot;[[But what does this have to do with Lee Williams? -&gt; friend 5]]&quot;</tw-passagedata><tw-passagedata pid="59" name=" friend 5" tags="" position="332,963" size="100,100">&quot;Dr. Frederick was a collector of Crimson Mask memorabilia,&quot; Dr. Boulder explains. You think of the red crystal ball and the ouija board, both with the strange engraving, and start to remember even more objects around his apartment with a similar theme. &quot;He had just discovered a new artifact and was eager to show it to Lee and I. I sent Lee down to retrieve it this evening and, well, the rest is history.&quot;
 
 &quot;Do you think he would be willing to talk with us more about the murder of Dr. Frederick if we asked him more about this artifact?&quot; Inspector Ward asks.
 
-&quot;It&#39;s certainly worth a shot,&quot; Dr. Stone replies. &quot;He&#39;s very passionate about this stuff. At the very least, it might get him to open up a little.&quot;
+&quot;It&#39;s certainly worth a shot,&quot; Dr. Boulder replies. &quot;He&#39;s very passionate about this stuff. At the very least, it might get him to open up a little.&quot;
 
 [[Thank you so much. We&#39;ll let you return to your evening. -&gt; next next]]</tw-passagedata><tw-passagedata pid="60" name=" suspect 2a" tags="" position="1102,1605" size="100,100">&quot;Yeah, that&#39;s right. Sort of,&quot; Lee says, running a hand through his hair. &quot;Listen to me carefully. The Order still exists now. They didn&#39;t die out when they lost their meeting space here. They&#39;re in our local government, in our justice system. They&#39;re on your investigation team.&quot;
 
 [[I can&#39;t believe this. -&gt; suspect 2b]]
-[[Okay, but what does this have to do with Dr. Frederick? -&gt; suspect 2b]]</tw-passagedata><tw-passagedata pid="61" name=" suspect 2b" tags="" position="1102,1755" size="100,100">&quot;Dr. Frederick was close to uncovering who these people were. It wasn&#39;t a matter of historical curiosity for him and me like it was for Dr. Stone. We were close to actually catching some of these guys. Close to making the system a little less rigged in their favor. But when I went down to meet with him tonight, he was murdered. And the secret passage you just went through was wide open.&quot;
+[[Okay, but what does this have to do with Dr. Frederick? -&gt; suspect 2b]]</tw-passagedata><tw-passagedata pid="61" name=" suspect 2b" tags="" position="1102,1755" size="100,100">&quot;Dr. Frederick was close to uncovering who these people were. It wasn&#39;t a matter of historical curiosity for him and me like it was for Dr. Boulder. We were close to actually catching some of these guys. Close to making the system a little less rigged in their favor. But when I went down to meet with him tonight, he was murdered. And the secret passage you just went through was wide open.&quot;
 
 [[What actually happened tonight? What are you so scared to say? -&gt; suspect 2c BIG REVEAL]]</tw-passagedata><tw-passagedata pid="62" name=" suspect 2c BIG REVEAL" tags="" position="1241,1456" size="100,100">&quot;The only people who knew that passageway existed were Dr. Frederick and I. Or so I thought. But I guess the Order must keep some kind of record on this building, because when I followed the passage up, I saw one of them in the stairwell. Someone you know.&quot;
 
@@ -430,7 +433,7 @@ Lee. It&#39;s Lee Williams. Relieved, you spring forward to help him put her in 
 
 Everyone is surprised to see you coming up the stairs with Irene Ward in handcuffs, but no one protests as you place her under arrest and load her into the back of a police car. As the car pulls away, you can&#39;t help but think that this arrest won&#39;t stick. Not while the rest of the Order is still out there covering for each other.
 
-You glance over to Lee, a sly grin taking over your face. &quot;Say, Mr. Williams,&quot; you say, watching the cra disappear over the hill and down the road. &quot;What would you say to helping me with a new mission?&quot;
+You glance over to Lee, a sly grin taking over your face. &quot;Say, Mr. Williams,&quot; you say, watching the car disappear over the hill and down the road. &quot;What would you say to helping me with a new mission?&quot;
 
 &#39;&#39;THE END&#39;&#39;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
