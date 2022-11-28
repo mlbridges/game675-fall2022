@@ -563,7 +563,7 @@ $bff isn’t very soothed by what you’ve said, but you seem to have stopped th
 
 You’re left on the porch, embarrassment and dread heavy in your chest. You hope you haven’t missed your chance with them after all.
 
-[[Forward in time...-&gt;Move 1]]</tw-passagedata><tw-passagedata pid="99" name="Move 1" tags="" position="401,6199" size="100,100">&#39;&#39;SCENE 4: Age 22&#39;&#39;
+[[Forward in time...-&gt;Move 1]]</tw-passagedata><tw-passagedata pid="99" name="Move 1" tags="" position="401,6199" size="100,100">(if: $bff is 0)[(set: $bff to &quot;River&quot;)]&#39;&#39;SCENE 4: Age 22&#39;&#39;
 The home you grew up in is now littered with moving boxes. It had been a while since you visited, and your childhood home was one aspect of many in your life that you took for granted the impermanence of. 
 
 Everything in your life is shifting. There’s nothing to cling onto, nothing to hold you steady. You’re adrift at sea without a lifevest… metaphorically, of course. Part of you would prefer being lost to the sea over dealing with a move.
@@ -903,7 +903,131 @@ Ah, yes, the present. What are you experiencing right this moment? Well, for one
 
 Deep within your soul, you know exactly where you’re headed.
 
-[[Head towards the haunted house.-&gt;Walk 4]]</tw-passagedata><tw-passagedata pid="156" name="Walk 4" tags="" position="401,6800" size="100,100">[[Forward in time...-&gt;Node 5a]]</tw-passagedata></tw-storydata>
+[[Head towards the haunted house.-&gt;Walk 4]]</tw-passagedata><tw-passagedata pid="156" name="Walk 4" tags="" position="401,6800" size="100,100">Although trick-or-treating hasn’t started yet, you’ve still seen a few stragglers in costume. Today is a Saturday - a dream come true for any children getting into the Halloween spirit. You feel jealous, followed by immediately feeling ridiculous for that jealousy.
+
+A couple of androgynous teenagers across the road catch your eye. One has their arm around the other. The duo is headed in the opposite direction. They were likely juniors or seniors in high school, if you had to guess. 
+
+The taller of the two wears a werewolf costume, stirring up your nostalgia more than ever. It puts your old costume to shame.
+
+Their partner wears a cat ear headband over a plain sheet with whiskers drawn on. They also wore cat paws and a tail. You’re impressed at how they’ve combined two stereotypical Halloween costumes in a way you’ve never seen before.
+
+[[Compliment their costumes.-&gt;Walk 5a]]
+[[Keep walking.-&gt;Walk 5b]]</tw-passagedata><tw-passagedata pid="157" name="Walk 5a" tags="" position="326,6950" size="100,100">You yell across the street, “Nice costumes, you two!” They both turn their heads to look at you. You assume from their confused glances that they hadn’t heard you. “Looking super cool!”
+
+You realize hearing may not have been an issue. The werewolf gives you a dirty look. You can’t tell what facial expression the ghost cat is making… probably for the best.
+
+You’re pretty sure you hear one say to the other, “Isn’t she, like, 30?” You want to tell yourself you misheard, that maybe it wasn’t about you. Deep down, you know that isn’t true.
+
+Still in your early 20s and already being mistaken for 30. You’re not sure how that makes you feel…
+
+[[Tell yourself you’re still young.-&gt;Walk 6a]]
+[[Try to get used to the idea of getting older.-&gt;Walk 6b]]</tw-passagedata><tw-passagedata pid="158" name="Walk 5b" tags="" position="476,6950" size="100,100">You decide not to bother the couple. They’re maybe five years younger than you, but every year counts at this weird stage in life where so much changes in so little time.
+
+You don’t want to be the awkward adult commenting on their costumes. Even if it was meant innocently, no need to yell across the street. In any case, you can’t deny that seeing those teenagers invoked an odd sense of deja vu.
+
+You miss your werewelf costume more than ever. Regrettably, it’s not the only part of your old life you catch yourself missing. Your feelings would be complicated enough with just the werewolf costume reminding you of a younger version of yourself…
+
+…why does their (somewhat literal) puppy love have to bring back memories of you and $bff? You try not to think about it too much. That is a random teenager, not a younger version of $bff. Even if (if: $bff is &quot;Ash&quot;)[the white sheet haphazardly draped atop their head](else-if: $bff is &quot;Jules&quot;) [the adorable cat accessories](else:)[the sheer weirdness of their costume combination] reminds you of them, it’s not. 
+
+Part of you wonders if you’ll ever find love again.
+
+[[Of course you’ll find love again.-&gt;Walk 6c]]
+[[Well, no shame in being single…-&gt;Walk 6d]]</tw-passagedata><tw-passagedata pid="159" name="Walk 6a" tags="" position="206,7098" size="100,100">(set: $agingAnxiety to true)Sure, you’re an adult who graduated college, but you’re still young. You’re not going to be 30 anytime soon. You may not be a teenager anymore, but if anything, that’s a relief.
+
+Might as well enjoy your relative youth while you still have it, right? Yes, that’s right. That’s why you let instinct guide you, why you’re headed towards the haunted house. It’s silly for you, a legal adult, to still be so entranced by it, but who wouldn’t be?
+
+[[Walk the rest of the way to the haunted house.-&gt;House 1]]</tw-passagedata><tw-passagedata pid="160" name="Walk 6b" tags="" position="356,7098" size="100,100">(set: $agingAnxiety to false)Getting used to the idea of  aging is easier said than done. That being said, it would benefit you to give it your best shot. After all, it’s inevitable… unless you die. You’re pretty sure that’s not going to happen anytime soon.
+
+You may not be 30 now, but eventually, you will be. The thought wigs you out, but you try not to shut it out. Sitting with the idea is easier said than done, but you do. You let the thought linger in your mind as you make your way to the haunted house.
+
+[[Walk the rest of the way to the haunted house.-&gt;House 1]]</tw-passagedata><tw-passagedata pid="161" name="Walk 6c" tags="" position="475,7098" size="100,100">(set $relationshipConfidence to true)Of course you’ll find love again someday. $bff may have been your first love, but that doesn’t mean they’ll be your only love. There’s a whole world outside the people you knew in elementary school, high school, college…
+
+You’re not entirely sure when you’ll find love again. You’re even less sure what type of person you’ll end up with next. Will they be similar to $bff? Maybe your next partner will be their total opposite. What would that look like? I guess that hypothetical person would be (if $bff is “Ash”)[someone sincere, heartfelt. They could go a single sentence without dripping sarcasm.] (if $bff is “River”)[someone approachable, easy to understand. With that person, what you see would be what you get.] (if $bff is “Jules”)[a bit of a rebel. That person would definitely be no pushover.]
+
+You can’t deny that you miss the feeling of being in love. It feels silly when your face grows hot at thought, but you can’t help it. Flustered and disoriented, you push on and continue heading towards the haunted house.
+
+[[Walk the rest of the way to the haunted house.-&gt;House 1]]</tw-passagedata><tw-passagedata pid="162" name="Walk 6d" tags="" position="599,7097" size="100,100">(set $relationshipConfidence to false)It embarrasses you that you struggle to imagine yourself dating anyone besides $bff. However, could anyone really blame you? They were you first, and as of now, only love. 
+
+Maybe it was silly to think your high school sweetheart would be your soulmate too. It’s not like that came from nothing, though. Five years is nothing to scoff at! Unfortunately, it made the end hurt even more.
+
+You realize that soulmates may not even be real. It’s difficult to say whether you truly believe it or not. You certainly believed yours was $bff for a while. There’s no point in thinking about them now. You try to push the thought out of your head, continuing to head to the haunted house.
+
+[[Walk the rest of the way to the haunted house.-&gt;House 1]]</tw-passagedata><tw-passagedata pid="163" name="House 1" tags="" position="200,7250" size="100,100">Here it is again… an eerily familiar sight. Part of you thought you’d never come back. The other part of you knew you were always destined to return to this house.
+
+A decent amount has changed in the past five years, but you can’t put your finger on it. You thought growing up would mean you’d be less scared, but you still find yourself shivering. 
+
+Creeped out or not, you refuse to be stopped. You’re not a child anymore, after all. (if: $agingAnxiety is false)[No, you’re an adult now… and that’s okay.](else-if: $agingAnxiety is true)[No, you  haven’t been one in several years now… how bizarre.](else:)[]
+
+[[Go inside.-&gt;House 2]]</tw-passagedata><tw-passagedata pid="164" name="House 2" tags="" position="400,7249" size="100,100">In the spirit of not being a frightened kid anymore, you resolve to try something new. That’s right - you’re gonna go to the attic! Any other time you came here, you would have been way too scared to go up there.
+
+The stairs creak with each step. The noise feels like it gets unnervingly louder as you ascend. You worry the old wood will cave through. Nonetheless, you keep walking. Child you would be so proud… and terrified.
+
+[[Climb the rest of the stairs.-&gt;House 3]]</tw-passagedata><tw-passagedata pid="165" name="House 3" tags="" position="600,7248" size="100,100">You don’t realize you’re holding your breath until you climb the last stair and exhale. Like the house you came from, there are boxes strewn about the attic. 
+
+Your initial browsing reviews nothing but boxes littered throughout the floor, alongside a generous helping of dust bunnies. Sitting atop one of the boxes, however, is a decisively unbox-like shape.
+
+Almost as if guided by instinct, you reach towards this not-box.
+
+[[Pick up the mysterious object.-&gt;House 4]]</tw-passagedata><tw-passagedata pid="166" name="House 4" tags="" position="201,7400" size="100,100">It’s soft… soft in a very particular way. Your heart races at the oddly familiar texture. It’s too dark to see much of anything, so you step towards the light of the window. Upon holding the mysterious soft object closer to you…
+
+…your heart skips a beat. Del the dolphin! How did your childhood plushie end up here? You never took Del here, did you?
+
+Suddenly, countless memories come rushing back to you. In moments of uncertainty, this dolphin was your confidant. It’s likely Del the dolphin knows at least one or two secrets not a living soul on this earth knows. 
+
+Did you bring Del here sometime and forget? Did someone else bring her here? Who would do that? Would $bff do such a thing? Probably not. (if: $bff is &quot;Jules&quot;)[They were far too kind to pull a prank like that on you.](else-if: $bff is &quot;Ash&quot;)[It’s not like they were above messing with you, but you’re not sure this was their style.](else:)[As weird as they are, this is an entirely different brand of weird.] 
+
+There’s a chance it’s the same brand of dolphin. As special as Del may have been to you, you doubt the plushie your parents gifted you all those years back was one-of-a-kind. That explanation makes perfect sense… why don’t you believe it?
+
+[[Hold the dolphin plushie closer.-&gt;House 4.5a]]
+[[Put down the dolphin plushie.-&gt;House 4.5b]]</tw-passagedata><tw-passagedata pid="167" name="House 4.5a" tags="" position="401,7400" size="100,100">(set: $plushieRecognition to true)Something possesses you (not literally, you’re pretty sure) to clutch the dolphin plushie closer to your chest. Perhaps most mystifyingly, you press your nose against the soft fabric and take in a whiff.
+
+Scent is the sense strongest associated with memory. You’re pretty sure that trivia fact is what guided that decision. When you get a noseful of dust and begin coughing, you start to doubt your own logic a little more.
+
+You can’t shake the idea that this isn’t just some random dolphin plushie. No… this is Del. You chuckle to yourself at your childhood decision to name the dolphin after yourself. You can’t tell if this is evidence kid you was self-centered or horrifically uncreative. Worse yet, it could be evidence of both.
+
+Eventually, you put Del back where you found her. You could torture yourself all night wondering how she ended up there, but you have more important things to do.
+
+Granted, you aren’t doing any of those important things now. You’re merely gazing out the attic window of a haunted house, one that almost feels like a second home from your dreams… or your nightmares.
+
+[[Look out the window.-&gt;House 6]]</tw-passagedata><tw-passagedata pid="168" name="House 4.5b" tags="" position="600,7400" size="100,100">(set: $plushieRecognition to false)There’s no use overthinking this dolphin plushie. Anything in this attic is surely haunted as the house containing it. Whether or not it’s Del the dolphin, you’re pretty sure that plushie is a cursed object now.
+
+Is thinking that silly? Perhaps. Either way, you’re not about to risk it. When you catch yourself shivering again, you tell yourself it’s because of the cold. You’re definitely not scared or anything.
+
+You step towards the window, stepping into the light of a beautiful sunset. Not that you stepped out of the dark because you were afraid… of course not…
+
+You didn’t set down the plushie because of fear. Okay, maybe it’s a little motivated by fear. More importantly, however, you want to keep yourself in the present. You could spend hours reminiscing on memories of a single plushie alone, but you have more important things to do.
+
+Granted, you aren’t doing any of those important things now. You’re merely gazing out the attic window of a haunted house, one that almost feels like a second home from your dreams… or your nightmares.
+
+[[Look out the window.-&gt;House 6]]</tw-passagedata><tw-passagedata pid="169" name="House 6" tags="" position="201,7552" size="100,100">You gaze into the distance, taking in the sight of your childhood neighborhood beneath a setting sun. It overwhelms you with emotions you struggle to describe. Maybe a pithy word to describe how you’re feeling exists in another language, but all you know is English, and you’re at a loss.
+
+You pull yourself back, literally and metaphorically zooming in. Instead of taking in an entire community, you focus solely on your own faintly mirrored reflection. Mirrors always gave you mixed feelings, but it’s hard to feel insecure when your reflection is too translucent to see in much detail.
+
+[[Next. -&gt;House 7]]</tw-passagedata><tw-passagedata pid="170" name="House 7" tags="" position="401,7550" size="100,100">You blink a couple of times, and your reflection in the mirror starts to ripple. After jumping back in shock and rubbing your eyes, it was still happening. It shows a picture much clearer than any window should be able to reflect back.
+
+After the image blurs and distorts, it arranges itself into a crystal clear view of an old lady on a rocking chair. 
+
+“I wanted to see MY future, not some random old lady. What is that, my grandma?” All of your grandparents died before you were born. You hadn’t seen enough pictures to recognize.
+
+Suddenly, you realize…
+
+It’s you.
+
+[[It’s… me? -&gt;House 8]]</tw-passagedata><tw-passagedata pid="171" name="House 8" tags="" position="600,7549" size="100,100">That old lady is YOU. Not some random lady. Not your grandma.
+
+Sure, it’s several decades down the road, but there’s no denying it. You’re probably in your sixties here, but there’s still a lively spark in your eyes. Old you would never be boring, after all.
+
+(if: $agingAnxiety is false)[If you have to grow old someday, this isn’t the worst way it could happen.](else-if: $agingAnxiety is true)[You don’t like it one bit. You’re not supposed to be that old. It doesn’t feel right.](else:)[You’re uncertain how seeing yourself at this age makes you feel. All you know is that it’s not something you’re going to be able to forget anytime soon.] 
+
+[[Next. -&gt;House 9]]</tw-passagedata><tw-passagedata pid="172" name="House 9" tags="" position="200,7700" size="100,100">You also can’t help but notice that you’re alone. (if: $relationshipConfidence is false)[It’s hard to pretend like it doesn’t feel like a kick in the chest. That said, it doesn’t surprise you one bit. Even if you stayed single until the grave, hopefully you had other people to fill the void.](else-if: $relationshipConfidence is true)[You’re sure the love of your life is right nearby, whoever they are. Assuming they didn’t die first, at least. Considering all the possibilities is more of an emotional rollercoaster than you’re prepared for.](else:)[Realistically, could you expect anything different? You’re genuinely not sure. Deep down, you know there are more important details to focus on if you make it that far.]
+
+“Is this really it?” you ask to no one in particular. “I wasn’t sure whether I was expecting a vision at all, but I kinda wanted to see more than Little Old Lady me sitting on a rocking chair…”
+
+[[Next. -&gt;House 10]]</tw-passagedata><tw-passagedata pid="173" name="House 10" tags="" position="400,7701" size="100,100">The image stays to older Delphine rocking back and forth. Before fading back to the previous reflection, you swear older you shakes her head at you, laughing as she disappears. Does she know you wanted more? Is she mocking you for expecting anything else? 
+
+Are you losing your mind? You realize you’re staring intently at your own barely there reflection in the window. The image of you in your twilight years is burned into your brain. Yet, only your current aged self remains visible. This is the most alone you’ve ever felt while in this house. In this lonely, cramped attic, there’s only you and (if: $plushieRecognition is false)[the dolphin plushie.](else-if: $plushieRecognition is true)[a dolphin plushie that a piece of your soul feels infused within, and not just because she shares your name.]
+
+[[Forward in time...-&gt;Node 5a]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
